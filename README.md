@@ -1,2 +1,2 @@
-"# elec5622-project" 
-the the code in finalarduino/mainfin is the final code uploaded to arduino,
+"# elec5622-project" /n
+the the code in final_arduino/mainfin is the final code uploaded to arduino,
