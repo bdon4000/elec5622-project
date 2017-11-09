@@ -11,9 +11,9 @@ extern volatile boolean firstBeat;        // used to seed rate array so we start
 extern volatile boolean secondBeat;      // used to seed rate array so we startup with reasonable BPM
 //  Variables
 extern int pulsePin;                 // Pulse Sensor purple wire connected to analog pin 0
-extern int blinkPin;                // pin to blink led at each beat
-extern int fadePin;                  // pin to do fancy classy fading blink at each beat
-extern int fadeRate;                 // used to fade LED on with PWM on fadePin
+//extern int blinkPin;                // pin to blink led at each beat
+//extern int fadePin;                  // pin to do fancy classy fading blink at each beat
+//extern int fadeRate;                 // used to fade LED on with PWM on fadePin
 
 // Volatile Variables, used in the interrupt service routine!
 

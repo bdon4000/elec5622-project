@@ -15,9 +15,9 @@ volatile boolean firstBeat = true;        // used to seed rate array so we start
 volatile boolean secondBeat = false;      // used to seed rate array so we startup with reasonable BPM
 //  Variables
 int pulsePin = 8;                 // Pulse Sensor purple wire connected to analog pin 0
-int blinkPin = 14;                // pin to blink led at each beat
-int fadePin = 5;                  // pin to do fancy classy fading blink at each beat
-int fadeRate = 0;                 // used to fade LED on with PWM on fadePin
+//int blinkPin = 14;                // pin to blink led at each beat
+//int fadePin = 5;                  // pin to do fancy classy fading blink at each beat
+//int fadeRate = 0;                 // used to fade LED on with PWM on fadePin
 volatile boolean Pulse = false;     // "True" when User's live heartbeat is detected. "False" when not a "live beat".
 volatile boolean QS = false;        // becomes true when Arduoino finds a beat.
 
@@ -49,7 +49,7 @@ void flash()
   if (N > 250){                                   // avoid high frequency noise
     if ( (Signal > thresh) && (Pulse == false) && (N > (IBI/5)*3) ){
       Pulse = true;                               // set the Pulse flag when we think there is a pulse
-      digitalWrite(blinkPin,HIGH);                // turn on pin 13 LED
+      //digitalWrite(blinkPin,HIGH);                // turn on pin 13 LED
       IBI = sampleCounter - lastBeatTime;         // measure time between beats in mS
       lastBeatTime = sampleCounter;               // keep track of time for next pulse
 
@@ -87,7 +87,7 @@ void flash()
   }
 
   if (Signal < thresh && Pulse == true){   // when the values are going down, the beat is over
-    digitalWrite(blinkPin,LOW);            // turn off pin 13 LED
+    //digitalWrite(blinkPin,LOW);            // turn off pin 13 LED
     Pulse = false;                         // reset the Pulse flag so we can do it again
     amp = P - T;                           // get amplitude of the pulse wave
     thresh = amp/2 + T;                    // set thresh at 50% of the amplitude

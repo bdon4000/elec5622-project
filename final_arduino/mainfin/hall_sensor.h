@@ -9,4 +9,8 @@
 #define INT5_pin18 5
 extern void hall_Init();
 extern void hall_SD_Write();
+extern double f1;
+extern double f2;
+extern double time_count0;
+extern double time_count1; 
 #endif

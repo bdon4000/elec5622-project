@@ -1,16 +1,10 @@
-/******************************************************************
-  作者：神秘藏宝室
-  店铺：ILoveMCU.taobao.com
-  最终解释权归原作者所有，鄙视其他店铺不劳而获的抄袭行为！
-******************************************************************/
-
 #include "all.h"
 //此处为了兼容其他的多串口Arduino板子
 #define GpsSerial Serial2 
 #define DebugSerial Serial2
 int L = 13; //LED指示灯引脚
 String GPS_data = "";
-struct
+struct GPS_Save_Data
 {
   char GPS_Buffer[80];
   bool isGetData;   //是否获取到GPS数据
@@ -63,13 +57,13 @@ void errorLog(int num)
 {
   DebugSerial.print("ERROR");
   DebugSerial.println(num);
-  while (1)
-  {
-    digitalWrite(L, HIGH);
-    delay(300);
-    digitalWrite(L, LOW);
-    delay(300);
-  }
+  //while (1)
+  //{
+  //  digitalWrite(L, HIGH);
+  //  delay(300);
+  //  digitalWrite(L, LOW);
+  //  delay(300);
+ // }
 }
 
 void printGpsBuffer()

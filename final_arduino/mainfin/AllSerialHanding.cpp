@@ -61,14 +61,14 @@ void serialOutputWhenBeatHappens(){
 //      run the Serial Plotter at 115200 baud: Tools/Serial Plotter or Command+L
 
 void ledFadeToBeat(){
-    fadeRate -= 15;                         //  set LED fade value
-    fadeRate = constrain(fadeRate,0,255);   //  keep LED fade value from going into negative numbers!
-    analogWrite(fadePin,fadeRate);          //  fade LED
+    //fadeRate -= 15;                         //  set LED fade value1111111111111111111111111111111111111111111111111111
+    //fadeRate = constrain(fadeRate,0,255);   //  keep LED fade value from going into negative numbers!1111111111111111111111111111
+    //analogWrite(fadePin,fadeRate);          //  fade LED1111111111111111111111111111111111111111111111111111111
   }
 
 void Pulse_Init(){
-  pinMode(blinkPin,OUTPUT);         // pin that will blink to your heartbeat!
-  pinMode(fadePin,OUTPUT);          // pin that will fade to your heartbeat!
+  //pinMode(blinkPin,OUTPUT);         // pin that will blink to your heartbeat!11111111111111111111111111111111111111111111111111
+  //pinMode(fadePin,OUTPUT);          // pin that will fade to your heartbeat!1111111111111111111111111111111111111111111111
 //  Serial.begin(115200);             // we agree to talk fast!
   interruptSetup();                 // sets up to read Pulse Sensor signal every 2mS
    // IF YOU ARE POWERING The Pulse Sensor AT VOLTAGE LESS THAN THE BOARD VOLTAGE,
@@ -85,7 +85,7 @@ void Pulse_Allot(){
   if (QS == true){     // A Heartbeat Was Found
                        // BPM and IBI have been Determined
                        // Quantified Self "QS" true when arduino finds a heartbeat
-        fadeRate = 255;         // Makes the LED Fade Effect Happen
+        //fadeRate = 255;         // Makes the LED Fade Effect Happen1111111111111111111111111111111111111111111111111111111111111
                                 // Set 'fadeRate' Variable to 255 to fade LED with pulse
         serialOutputWhenBeatHappens();   // A Beat Happened, Output that to serial.
         QS = false;                      // reset the Quantified Self flag for next time
